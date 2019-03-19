@@ -26,3 +26,12 @@ function flash($name = '', $message = '', $class = 'alert alert-success') {
   }
 }
 
+// check if user is really logged out/in
+function isLoggedIn() {
+  if(isset($_SESSION['user_id'])) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
