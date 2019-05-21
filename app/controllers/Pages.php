@@ -9,6 +9,10 @@ class Pages extends Controller {
 
   // this method must exist otherwise we can get error
   public function index() {
+    if(isLoggedIn()){
+      redirect('posts');
+    }
+
     $data = [
       'title' => 'Yu Feng',
       'description' => 'Simple Social Network built on the FengYuMVC PHP Framework'
